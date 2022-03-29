@@ -31,6 +31,7 @@ public class ExercicioIf06 {
         else {
             System.out.println("Existe notas iguais");
         }
+        scanner.close();
     }
 
     private static boolean obterValorAMaior(int valorA, int valorB, int valorC) {
