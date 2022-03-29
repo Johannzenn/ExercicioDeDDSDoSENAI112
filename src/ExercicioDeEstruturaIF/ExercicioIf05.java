@@ -21,9 +21,13 @@ public class ExercicioIf05 {
         System.out.println("Por favor digite a segunda nota do aluno(a) (っ◕‿◕)っ\n--> ");
         int segundaNotaDoAluno = scanner.nextInt();
 
-        int mediaDanotaDoAluno = (primeiraNotaDoAluno + segundaNotaDoAluno) / VALOR_PARA_CALCULAR_A_MEDIA;
+        int mediaDaNotaDoAluno = (primeiraNotaDoAluno + segundaNotaDoAluno) / VALOR_PARA_CALCULAR_A_MEDIA;
 
-        boolean mediaMaior = primeiraNotaDoAluno >= MEDIA_PARA_SER_APROVADO_OU_REPROVADO;
-        boolean mediaMenor = primeiraNotaDoAluno >= NOTA_MAXIMA_DO_ALUNO;
+        boolean mediaMaior = mediaDaNotaDoAluno >= MEDIA_PARA_SER_APROVADO_OU_REPROVADO;
+        boolean mediaMenor = mediaDaNotaDoAluno >= MEDIA_PARA_SER_APROVADO_OU_REPROVADO;
+
+        if (mediaMaior){
+            System.out.println("");
+        }
     }
 }
