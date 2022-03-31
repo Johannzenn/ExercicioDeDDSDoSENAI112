@@ -19,7 +19,7 @@ public class ExercicioIf11 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Por favor digite o seu salário atual: ");
+        System.out.print("Por favor digite o seu salário atual: ");
         double salarioInicial = scanner.nextDouble();
 
         System.out.println("Seu salário antes do reajuste: R$ " + salarioInicial);
@@ -40,16 +40,16 @@ public class ExercicioIf11 {
         boolean reajuste05 = salarioInicial >= SALRIO_DE_REAJUSTE_DE_5;
 
         if (reajuste20) {
-            System.out.println(salarioComReajusteDe20);
+            System.out.println("O reajuste foi de " + porcentagemParaReajusteDe20 + " % " + "| O seu salário atual é de : " + salarioComReajusteDe20);
         }
         else if (reajuste15) {
-            System.out.println(salarioComReajusteDe15);
+            System.out.println("O reajuste foi de " + porcentagemParaReajusteDe15 + " % " + "| O seu salário atual é de : " + salarioComReajusteDe15);
         }
         else if (reajuste10) {
-            System.out.println(salarioComReajusteDe10);
+            System.out.println("O reajuste foi de " + porcentagemParaReajusteDe10 + " % " + "| O seu salário atual é de : " + salarioComReajusteDe10);
         }
         else if (reajuste05) {
-            System.out.println(salarioComReajusteDe05);
+            System.out.println("O reajuste foi de " + porcentagemParaReajusteDe05 + " % " + "| O seu salário atual é de : " + salarioComReajusteDe05);
         }
         scanner.close();
     }
