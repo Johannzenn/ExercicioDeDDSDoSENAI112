@@ -11,5 +11,7 @@ public class ExercicioIf12 {
 
         System.out.println("Digite a quantidade de horas trabalhadas por mês --> ");
         int horasTrabalhadasNoMes = scanner.nextInt();
+
+
     }
 }
