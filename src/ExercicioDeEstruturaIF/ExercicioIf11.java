@@ -9,11 +9,12 @@ public class ExercicioIf11 {
     static final double SALARIO_REAJUSTE_DE_10 = 1500.00;
     static final double SALRIO_DE_REAJUSTE_DE_5 = 1500.00;
 
-
     static final double PORCENTAGEM_DE_20 = 20;
     static final double PORCENTAGEM_DE_15 = 15;
     static final double PORCENTAGEM_DE_10 = 10;
     static final double PORCENTAGEM_DE_05 = 5;
+
+    static final double VALOR_PARA_MULTIPLICAR = 100;
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -23,10 +24,15 @@ public class ExercicioIf11 {
 
         System.out.println("Seu salário antes do reajuste: R$ " + salarioInicial);
 
-        double porcentagemParaReajusteDe20 = (salarioInicial * PORCENTAGEM_DE_20) / 100;
-        double porcentagemParaReajusteDe15 = (salarioInicial * PORCENTAGEM_DE_15) / 100;
-        double porcentagemParaReajusteDe10 = (salarioInicial * PORCENTAGEM_DE_10) / 100;
-        double porcentagemParaReajusteDe05 = (salarioInicial * PORCENTAGEM_DE_05) / 100;
+        double porcentagemParaReajusteDe20 = (salarioInicial * PORCENTAGEM_DE_20) / VALOR_PARA_MULTIPLICAR;
+        double porcentagemParaReajusteDe15 = (salarioInicial * PORCENTAGEM_DE_15) / VALOR_PARA_MULTIPLICAR;
+        double porcentagemParaReajusteDe10 = (salarioInicial * PORCENTAGEM_DE_10) / VALOR_PARA_MULTIPLICAR;
+        double porcentagemParaReajusteDe05 = (salarioInicial * PORCENTAGEM_DE_05) / VALOR_PARA_MULTIPLICAR;
+
+        double salarioComReajusteDe20 = (porcentagemParaReajusteDe20 + salarioInicial);
+        double salarioComReajusteDe15 = (porcentagemParaReajusteDe15 + salarioInicial);
+        double salarioComReajusteDe10 = (porcentagemParaReajusteDe10 + salarioInicial);
+        double salarioComReajusteDe05 = (porcentagemParaReajusteDe05 + salarioInicial);
 
         boolean reajuste20 = salarioInicial <= SALARIO_REAJUSTE_DE_20;
         boolean reajuste15 = salarioInicial >= SALARIO_REAJUSTE_DE_20 && salarioInicial <= SALARIO_REAJUSTE_DE_15;
@@ -34,16 +40,17 @@ public class ExercicioIf11 {
         boolean reajuste05 = salarioInicial >= SALRIO_DE_REAJUSTE_DE_5;
 
         if (reajuste20) {
-            System.out.println(porcentagemParaReajusteDe20);
+            System.out.println(salarioComReajusteDe20);
         }
         else if (reajuste15) {
-            System.out.println(porcentagemParaReajusteDe15);
+            System.out.println(salarioComReajusteDe15);
         }
         else if (reajuste10) {
-            System.out.println(porcentagemParaReajusteDe10);
+            System.out.println(salarioComReajusteDe10);
         }
         else if (reajuste05) {
-            System.out.println(porcentagemParaReajusteDe05);
+            System.out.println(salarioComReajusteDe05);
         }
+        scanner.close();
     }
 }
